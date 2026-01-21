@@ -1,0 +1,177 @@
+-------------------SHOP
+
+
+public class Shop {
+
+
+	Laptop[] laptop;
+	String name;
+
+	public Shop() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Shop(Laptop[] laptop, String name) {
+		super();
+		this.laptop = laptop;
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "Shop [laptop=" + Arrays.toString(laptop) + ", name=" + name + "]";
+	}
+
+	public Laptop[] getLaptop() {
+		return laptop;
+	}
+
+	public void setLaptop(Laptop[] laptop) {
+		this.laptop = laptop;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+	
+	
+}
+
+
+
+
+--------------------------LAPTOP
+
+public class Laptop {
+
+private float price;
+private String model;
+public float getPrice() {
+	return price;
+}
+
+
+public void setPrice(float price) {
+	this.price = price;
+}
+
+
+public String getModel() {
+	return model;
+}
+
+
+public void setModel(String model) {
+	this.model = model;
+}
+
+
+public String getMaker() {
+	return maker;
+}
+
+
+public void setMaker(String maker) {
+	this.maker = maker;
+}
+
+
+private String maker;
+
+public Laptop(float price, String model, String maker) {
+	super();
+	this.price = price;
+	this.model = model;
+	this.maker = maker;
+	
+}
+
+
+@Override
+public String toString() {
+	return "Laptop [price=" + price + ", model=" + model + ", maker=" + maker + "]";
+
+}
+
+
+}
+
+
+-------------service
+
+
+import javax.swing.JOptionPane;
+
+public class ShopServies {
+
+	
+	static Shop[] shops=new Shop[2];
+	
+	
+	static Laptop[] findLaptops(String shopName)
+	{
+		for(Shop shop:shops)
+		{
+			if(shop.getName().equalsIgnoreCase(shopName))
+				return shop.getLaptop();
+		}
+		return null;
+	}
+	
+	public static void main(String[] args) {
+
+		ShopServies s=new ShopServies();
+		
+		Laptop laptopa1=new Laptop(10.5f, "a1","HP");
+		Laptop laptopa2=new Laptop(12.5f, "a2","HP");
+		Laptop laptopa3=new Laptop(13.5f, "a3","HP");
+	
+		
+		Laptop[] laptops1=new Laptop[3];
+		Laptop[] laptops2=new Laptop[2];
+		
+		
+		laptops1[0]=laptopa1;
+		laptops1[1]=laptopa2;
+		laptops1[2]=laptopa3;
+		
+		laptops2[0]=laptopa2;
+		laptops2[1]=laptopa3;
+		
+		
+		
+		Shop shop1=new Shop(laptops1,"abc ltd");
+		Shop shop2=new Shop(laptops2,"xyz");
+		
+	
+		shops[0]=shop1;
+		shops[1]=shop2;
+		
+	
+		
+		
+		Laptop[] searchedLaps=findLaptops("abc LTD");
+		
+		for(Laptop l:searchedLaps)
+		{
+		System.out.println(l);
+		}
+
+}
+}
+
+
+
+
+
+
+
+
+
+
