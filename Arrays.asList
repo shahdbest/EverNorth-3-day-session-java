@@ -1,0 +1,28 @@
+//list -> allows duplicates- > maintains order
+
+//vector -> thread safe -> slow -> should be used in multi threaded env
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.Vector;
+
+public class MyDemos {
+ 
+	public static void main(String[] args) {
+
+	List<Integer> nums=Arrays.asList(3,5,1,7,8,9);
+
+	//nums.add(500);
+	nums.set(2, 700);
+	
+	System.out.println(nums);
+	//Collections.sort(nums);
+	Collections.sort(nums,Collections.reverseOrder());
+	System.out.println(nums);
+		
+	}
+
+}
