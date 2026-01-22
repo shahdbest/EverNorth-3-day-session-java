@@ -1,0 +1,90 @@
+package evernorth.demos.service;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import evernorth.demos.model.Player;
+import evernorth.demos.sorting.PlayerIdSort;
+import evernorth.demos.sorting.PlayerNameSort;
+
+public class PlayerService {
+
+	public static void main(String[] args) {
+
+		
+		List<Player> players=new ArrayList<Player>();
+		
+	Player player1=new Player(45, "Rohit", "MI");	
+	Player player2=new Player(18, "Virat", "RCB");
+	Player player3=new Player(1, "Rahul", "DC");
+	Player player4=new Player(7, "MSD", "CSK");
+	Player player5=new Player(99, "Ashwin", "CSK");
+	
+		
+	players.add(player1);
+	players.add(player2);
+	players.add(player3);
+	players.add(player4);
+	players.add(player5);
+	
+	
+	Collections.sort(players,new PlayerIdSort());
+	
+	for(Player player:players)
+	System.out.println(player);
+	
+	System.out.println("name sort");
+	
+	Collections.sort(players,new PlayerNameSort());
+	for(Player player:players)
+		System.out.println(player);
+		
+	
+	
+	}
+
+}
+
+
+-------------------------idsort
+
+package evernorth.demos.sorting;
+
+import java.util.Comparator;
+
+import evernorth.demos.model.Player;
+
+public class PlayerIdSort implements Comparator<Player>{
+
+	@Override
+	public int compare(Player o1, Player o2) {
+		
+		return o1.getPlayerId() - o2.getPlayerId();
+	}
+
+	
+}
+
+
+------------name sort
+
+
+
+
+package evernorth.demos.sorting;
+
+import java.util.Comparator;
+
+import evernorth.demos.model.Player;
+
+public class PlayerNameSort implements Comparator<Player>{
+
+	@Override
+	public int compare(Player o1, Player o2) {
+		// TODO Auto-generated method stub
+		return o1.getName().compareTo(o2.getName());
+	}
+}
+
+
