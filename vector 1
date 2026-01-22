@@ -1,0 +1,26 @@
+//list -> allows duplicates- > maintains order
+
+//vector -> thread safe -> slow -> should be used in multi threaded env
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
+public class MyDemos {
+
+	public static void main(String[] args) {
+
+		List<String> names=new Vector<>();
+		names.add("hello");
+		names.add("virat");
+		names.add("rohit");
+		names.add("virat");
+			
+		//names.add(1, "new data");
+		boolean isPresent= names.contains("virat");
+		System.out.println(isPresent);
+		System.out.println(names);
+	}
+
+}
