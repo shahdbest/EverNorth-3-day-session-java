@@ -1,0 +1,31 @@
+package evernorth.demos.service;
+
+import java.util.Collections;
+import java.util.Deque;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.concurrent.ArrayBlockingQueue;
+
+public class PlayerService {
+
+	public static void main(String[] args) {
+
+		Queue<Integer> myQueue= new ArrayBlockingQueue<Integer>(4);
+		
+		myQueue.offer(1);
+		myQueue.offer(4);
+		myQueue.add(100);
+		myQueue.add(7);
+		
+	//	myQueue.add(117); exception
+		//myQueue.offer(4);	 no exception
+
+		System.out.println(myQueue.poll());
+		System.out.println(myQueue.poll());
+		System.out.println(myQueue.poll());
+		System.out.println(myQueue.poll());
+	}
+
+}
