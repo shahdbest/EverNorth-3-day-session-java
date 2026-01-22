@@ -1,0 +1,38 @@
+package evernorth.demos.service;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
+
+import evernorth.demos.model.Player;
+import evernorth.demos.sorting.PlayerIdSort;
+
+public class PlayerService {
+
+	public static void main(String[] args) {
+
+	
+		Set<Player> players=new TreeSet<>(new PlayerIdSort());
+		
+		Player player1=new Player(45, "Rohit", "MI");	
+		Player player2=new Player(18, "Virat", "RCB");
+		Player player3=new Player(1, "Rahul", "DC");
+		Player player4=new Player(7, "MSD", "CSK");
+		Player player5=new Player(99, "Ashwin", "CSK");
+		
+			
+		players.add(player1);
+		players.add(player2);
+		players.add(player3);
+		players.add(player4);
+		players.add(player5);
+	
+		
+		
+		for(Player player:players)
+			System.out.println(player);
+	
+	}
+
+}
