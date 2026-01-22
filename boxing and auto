@@ -1,0 +1,24 @@
+
+
+
+public class MyDemos {
+
+		public static void main(String[] args) {
+
+			String x="10";
+			
+			
+			int a=100;
+			byte b=(byte)a;
+			
+		//	int c=(String)x;
+	
+			
+			Integer in=Integer.parseInt(x);
+			int c=in;
+		
+			int d=Integer.parseInt(x);
+		
+		}
+
+}
