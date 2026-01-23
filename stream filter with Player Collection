@@ -1,0 +1,36 @@
+package evernorth.demos.service;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import evernorth.demos.model.Player;
+import evernorth.demos.sorting.PlayerIdSort;
+
+public class PlayerService {
+
+	public static void main(String[] args) {
+	
+		Player player1=new Player(18, "virat", "rcb");
+		Player player2=new Player(45, "rohit", "mi");
+		Player player3=new Player(1, "rahul", "dc");
+		Player player4=new Player(15, "anydata", "dc");
+		
+		
+		List<Player> players=new ArrayList<Player>();
+		
+		players.add(player3);
+		players.add(player2);
+		players.add(player1);
+		players.add(player4);
+
+		players.stream().
+		filter(player->
+		(player.getPlayerId()  > 18))
+		.forEach(x->{System.out.println(x);});
+		;
+	
+		
+	}
+
+}
