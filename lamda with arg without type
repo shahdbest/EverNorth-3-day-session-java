@@ -1,0 +1,17 @@
+@FunctionalInterface
+interface AnyName{
+	void disp(String msg);
+}
+
+public class Java8Stuff {
+	public static void main(String[] args) {
+		AnyName a=(msg)->
+		{
+			System.out.println("hello world is this very simple ????");				
+			System.out.println(msg);
+		};
+		a.disp("hello from display");
+	
+	}
+
+}
