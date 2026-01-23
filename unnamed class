@@ -1,0 +1,17 @@
+interface AnyName{
+	void disp();
+}
+
+public class Java8Stuff {
+	public static void main(String[] args) {
+		AnyName a=new AnyName() {
+			@Override
+			public void disp() {
+			System.out.println("hello world where is impl class ????");				
+			}
+		}; 
+		a.disp();
+	
+	}
+
+}
