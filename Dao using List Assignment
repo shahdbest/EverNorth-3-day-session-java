@@ -1,0 +1,122 @@
+--------------------------model 
+
+package evernorth.demos.model;
+
+public class Player{
+
+	private int playerId;
+	private String name;
+	private String team;
+
+	public Player() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Player(int playerId, String name, String team) {
+		super();
+		this.playerId = playerId;
+		this.name = name;
+		this.team = team;
+	}
+
+	public int getPlayerId() {
+		return playerId;
+	}
+
+	public void setPlayerId(int playerId) {
+		this.playerId = playerId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
+	@Override
+	public String toString() {
+		return "Player [playerId=" + playerId + ", name=" + name + ", team=" + team + "]";
+	}
+
+
+	
+}
+
+
+------------------------DAO 
+
+
+package evernorth.demos.model.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import evernorth.demos.model.Player;
+
+public class PlayerDao {
+
+	List<Player> players=new ArrayList<>();
+	
+
+	public Player addPlayer(Player player){
+		//write the code to add a given player in players list
+
+		//return the newly added player details
+		return null;
+	}
+
+	public Player deletePlayer(int playerId){
+		//write the code to delete a  player in players list based on the given id
+
+		
+		//return the deleted player details
+		return null;
+	}
+
+	
+	public Player findPlayerById(int playerId){
+		//write the code to search a  player in players list based on the given id
+
+		
+		//return the searched player details
+		return null;
+	}
+	
+	
+	public Player updatePlayer(Player player,int playerId){
+		//write the code to update a given player in players list 
+		//where the existing player details has to be modified based on the player id 
+
+		//return the updated player details
+		return null;
+	}
+	
+	
+	
+	
+}
+
+
+---------------------service 
+//USE THE SERVICE TO TEST YOUR FUNCTIONALITY 
+package evernorth.demos.service;
+
+public class PlayerService {
+
+	public static void main(String[] args) {
+	}
+
+}
+
+
+
