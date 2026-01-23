@@ -1,0 +1,16 @@
+@FunctionalInterface
+interface AnyName{
+	int add(int x,int y);
+}
+
+public class Java8Stuff {
+	public static void main(String[] args) {
+		
+		AnyName a1=(a,b)->(a+b);
+		
+		
+		System.out.println(a1.add(20,100));
+	
+	}
+
+}
