@@ -1,0 +1,18 @@
+interface AnyName{
+	void disp();
+}
+class AnyNameImpl implements AnyName{
+	public void disp() {
+		System.out.println("disp method");
+	}
+	
+}
+
+public class Java8Stuff {
+	public static void main(String[] args) {
+		AnyName a=new AnyNameImpl(); 
+		a.disp();
+	
+	}
+
+}
